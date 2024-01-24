@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layouts/base}" lang="en">
+
+<head>
+  <title>Greet</title>
+</head>
+
+<body>
+<th:block layout:fragment="body" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div class="px-4 py-5 my-5">
+    <h3 class="display-5 fw-bold">Demo Login 2</h3>
+
+    <form th:action="@{/demologin}" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+  </div>
+  <!-- End of body content specific to page -->
+</th:block>
+</body>
+
+</html>
