@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Random;
+
 import jakarta.persistence.*;
 
 @Data  // Annotations to simplify writing code (ie constructors, setters)
@@ -21,6 +23,16 @@ public class Jokes {
     private int haha;
     private int boohoo;
 
+
+    public static int randomLikes(){
+        // Creating a Random object
+        Random random = new Random();
+
+        // Generating a random number between 0 and 10 (inclusive)
+        int randomNumber = random.nextInt(11); // 11 is exclusive, so this generates numbers from 0 to 10
+
+        return randomNumber;
+    }
     // starting jokes
     public static String[] init() {
         final String[] jokesArray = {
